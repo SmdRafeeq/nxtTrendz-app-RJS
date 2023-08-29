@@ -11,7 +11,7 @@ const Cart = () => (
     {value => {
       const {cartList, removeAllCartItems} = value
       const showEmptyView = cartList.length === 0
-      
+
       const onClickRemoveAll = () => {
         removeAllCartItems()
       }
@@ -25,7 +25,13 @@ const Cart = () => (
             ) : (
               <div className="cart-content-container">
                 <h1 className="cart-heading">My Cart</h1>
-                <button type='button' className='remove-all-btn' onClick={onClickRemoveAll} >Remove All</button>
+                <button
+                  type="button"
+                  className="remove-all-btn"
+                  onClick={onClickRemoveAll}
+                >
+                  Remove All
+                </button>
                 <CartListView />
                 <CartSummary />
               </div>
